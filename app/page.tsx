@@ -1,5 +1,77 @@
+import React from "react";
 import Image from "next/image";
 import Script from "next/script";
+import Gallery from "../components/Gallery";
+
+type IconProps = React.SVGProps<SVGSVGElement>;
+
+const ToothIcon = (props: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+    <path
+      d="M9.5 3.5C7.5 3.7 6 5.4 6 7.4c0 .8.1 1.6.3 2.3.3 1 .5 1.7.6 2.8.2 1.7.5 3.2 1.1 4.8.3.7.8 1.4 1.5 1.4.7 0 1-.6 1.3-1.2.3-.7.6-1.5.9-2.3.3.8.6 1.6.9 2.3.3.6.6 1.2 1.3 1.2.7 0 1.2-.7 1.5-1.4.7-1.6.9-3.1 1.1-4.8.1-1.1.3-1.8.6-2.8.2-.7.3-1.5.3-2.3C18 5.4 16.5 3.7 14.5 3.5c-1.1-.1-2.1.3-2.5 1-.4-.7-1.4-1.1-2.5-1Z"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const ImplantIcon = (props: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+    <path
+      d="M9 4.5h6c.8 0 1.5.7 1.5 1.5v1c0 1.7-1.3 3-3 3h-3c-1.7 0-3-1.3-3-3v-1c0-.8.7-1.5 1.5-1.5Z"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12 10v6.5M9 12h6M10 15h4M11 18h2"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const JawIcon = (props: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+    <path
+      d="M6 5.5c.8-.3 1.7-.5 2.7-.5h6.6c1 0 1.9.2 2.7.5M5 8c.3 1.8.9 3.1 1.7 4 .9 1 2.1 1.5 3.3 1.5h4c1.2 0 2.4-.5 3.3-1.5.8-.9 1.4-2.2 1.7-4"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9 14.5v1c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-1"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const ChatIcon = (props: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+    <path
+      d="M6 18.5 4.5 20v-3.5M8 7.5h8M8 11.5h4"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M7 4.5h10c1.1 0 2 .9 2 2v7c0 1.1-.9 2-2 2H9l-3 3v-3H7c-1.1 0-2-.9-2-2v-7c0-1.1.9-2 2-2Z"
+      stroke="currentColor"
+      strokeWidth="1.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 export default function Home() {
   const schemaDentist = {
@@ -123,7 +195,6 @@ export default function Home() {
                 {/* Doktor görseli – klinik / ünit hissi */}
                 <div className="relative">
                   <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-[1.7rem] border border-sky-100 bg-white shadow-md sm:h-72 sm:w-72">
-                    {/* Hafif klinik/a.i glow */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.22),_transparent_55%)]" />
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent" />
                     <Image
@@ -141,96 +212,6 @@ export default function Home() {
                 </div>
               </div>
             </section>
-			
-			{/* ÖNE ÇIKAN İSTATİSTİKLER */}
-<section className="mt-4 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm sm:px-6 sm:py-5">
-  <div className="grid gap-4 text-sm text-slate-800 sm:grid-cols-3">
-    <div className="flex flex-col gap-1 rounded-xl bg-sky-50/70 p-3">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        Mesleki Deneyim
-      </span>
-      <span className="text-2xl font-semibold text-sky-800">
-        {new Date().getFullYear() - 2002}+ yıl
-      </span>
-      <p className="text-[13px] leading-snug text-slate-600">
-        2002’den bu yana aktif klinik diş hekimliği pratiği.
-      </p>
-    </div>
-
-    <div className="flex flex-col gap-1 rounded-xl bg-emerald-50/70 p-3">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        Ceyhan’da Hizmet
-      </span>
-      <span className="text-2xl font-semibold text-emerald-800">
-        {new Date().getFullYear() - 2015}+ yıl
-      </span>
-      <p className="text-[13px] leading-snug text-slate-600">
-        2015’ten bu yana Ceyhan Devlet Hastanesi ADSM Ek Hizmet Birimi sorumlu hekimi.
-      </p>
-    </div>
-
-    <div className="flex flex-col gap-1 rounded-xl bg-cyan-50/70 p-3">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        Uzun Süreli Takip
-      </span>
-      {/* Buradaki sayı bilinmiyorsa şimdilik köşeli parantezle placeholder bırak */}
-      <span className="text-2xl font-semibold text-cyan-800">
-        {/* Örn: 3000+ */}
-        Binlerce mutlu hasta dosyası
-      </span>
-      <p className="text-[13px] leading-snug text-slate-600">
-        Yıllar içinde Ceyhan ve çevresinden çok sayıda hastayla sürdürülen uzun soluklu hekim–hasta ilişkileri.
-      </p>
-    </div>
-  </div>
-</section>
-
-			{/* ÖNE ÇIKANLAR BANDI */}
-<section className="mt-4 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm sm:px-6 sm:py-5">
-  <div className="grid gap-4 text-sm text-slate-800 sm:grid-cols-3">
-    <div className="flex items-start gap-3">
-      <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-sky-50 text-sky-700 text-xs font-semibold">
-        20+
-      </div>
-      <div>
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-          Mesleki Deneyim
-        </div>
-        <p className="text-[13px] leading-snug">
-          2002’den bu yana aktif klinik diş hekimliği pratiği.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start gap-3">
-      <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 text-xs font-semibold">
-        2015
-      </div>
-      <div>
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-          Ceyhan’a Bağlılık
-        </div>
-        <p className="text-[13px] leading-snug">
-          2015’ten bu yana Ceyhan Devlet Hastanesi ADSM sorumlu hekimi.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start gap-3">
-      <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700 text-xs font-semibold">
-        Kamu
-      </div>
-      <div>
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-          Kamu Sağlık Hizmeti
-        </div>
-        <p className="text-[13px] leading-snug">
-          Etik, şeffaf ve kamu odaklı sağlık hizmeti anlayışı.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
             {/* CEYHAN’A GÖNÜL VERMİŞ HEKİM */}
             <section
@@ -263,9 +244,12 @@ export default function Home() {
                 <div className="space-y-4">
                   <h2
                     id="about-title"
-                    className="text-xl font-semibold tracking-tight text-slate-900"
+                    className="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
                   >
-                    Hakkında
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-sky-50">
+                      <ToothIcon className="h-4 w-4 text-sky-600" />
+                    </span>
+                    <span>Hakkında</span>
                   </h2>
                   <p className="text-sm leading-relaxed text-slate-700">
                     Dt. Hüseyin Bora ŞİMŞEK, diş hekimliği meslek hayatına{" "}
@@ -325,6 +309,7 @@ export default function Home() {
                     </li>
                   </ul>
                   <p className="pt-1 text-[11px] text-slate-500">
+                    Eğitim, uzmanlık ve sertifikalar daha sonra detaylandırılabilir.
                   </p>
                 </div>
               </div>
@@ -334,9 +319,12 @@ export default function Home() {
             <section id="journey" aria-labelledby="journey-title">
               <h2
                 id="journey-title"
-                className="mb-6 text-xl font-semibold tracking-tight text-slate-900"
+                className="mb-6 flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
               >
-                Mesleki Yolculuk
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-50">
+                  <JawIcon className="h-4 w-4 text-emerald-600" />
+                </span>
+                <span>Mesleki Yolculuk</span>
               </h2>
               <div className="space-y-6 border-l border-slate-200 pl-5 text-sm text-slate-700">
                 {journeyItems.map((item) => (
@@ -350,42 +338,6 @@ export default function Home() {
                 ))}
               </div>
             </section>
-			{/* RANDEVU SÜRECİ */}
-<section className="mt-2 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-  <h2 className="mb-4 text-lg font-semibold tracking-tight text-slate-900">
-    Muayene Süreci Nasıl İlerler?
-  </h2>
-  <div className="grid gap-4 text-sm text-slate-700 sm:grid-cols-3">
-    <div className="flex flex-col gap-1 rounded-2xl bg-slate-50 p-4">
-      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        1. Değerlendirme
-      </div>
-      <p className="text-[13px] leading-snug">
-        Şikâyetleriniz dinlenir ve ağız içi muayene yapılır; ihtiyaçlarınız
-        net bir dille anlatılır.
-      </p>
-    </div>
-    <div className="flex flex-col gap-1 rounded-2xl bg-slate-50 p-4">
-      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        2. Planlama
-      </div>
-      <p className="text-[13px] leading-snug">
-        Gerekiyorsa radyografik inceleme ve size özel bir tedavi planı
-        oluşturulur.
-      </p>
-    </div>
-    <div className="flex flex-col gap-1 rounded-2xl bg-slate-50 p-4">
-      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        3. Tedavi & Takip
-      </div>
-      <p className="text-[13px] leading-snug">
-        Uygulanan tedaviler, kontrol randevuları ile desteklenir; uzun dönem
-        takip önceliklendirilir.
-      </p>
-    </div>
-  </div>
-</section>
-
 
             {/* UZMANLIK ALANLARI */}
             <section id="services" aria-labelledby="services-title">
@@ -393,14 +345,23 @@ export default function Home() {
                 <div>
                   <h2
                     id="services-title"
-                    className="mb-4 text-xl font-semibold tracking-tight text-slate-900"
+                    className="mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
                   >
-                    Klinik İlgi Alanları
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-cyan-50">
+                      <ToothIcon className="h-4 w-4 text-cyan-600" />
+                    </span>
+                    <span>Klinik İlgi Alanları</span>
                   </h2>
                   <div className="grid gap-4 text-xs text-slate-800 sm:grid-cols-2">
+                    {/* Estetik */}
                     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                      <div className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
-                        Estetik
+                      <div className="mb-3 flex items-center gap-2">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-50">
+                          <ToothIcon className="h-4 w-4 text-sky-600" />
+                        </div>
+                        <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
+                          Estetik
+                        </div>
                       </div>
                       <ul className="space-y-1">
                         <li>Estetik lamina veneer uygulamaları</li>
@@ -408,9 +369,16 @@ export default function Home() {
                         <li>Dijital gülüş tasarımı</li>
                       </ul>
                     </div>
+
+                    {/* İmplant Üstü Protezler */}
                     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                      <div className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
-                        İmplant Üstü Protezler
+                      <div className="mb-3 flex items-center gap-2">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-50">
+                          <ImplantIcon className="h-4 w-4 text-cyan-600" />
+                        </div>
+                        <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
+                          İmplant Üstü Protezler
+                        </div>
                       </div>
                       <ul className="space-y-1">
                         <li>İmplant üstü sabit ve hareketli protezler</li>
@@ -418,9 +386,16 @@ export default function Home() {
                         <li>Komplike vakalarda planlama</li>
                       </ul>
                     </div>
+
+                    {/* Fonksiyon */}
                     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                      <div className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
-                        Fonksiyon
+                      <div className="mb-3 flex items-center gap-2">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50">
+                          <JawIcon className="h-4 w-4 text-emerald-600" />
+                        </div>
+                        <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
+                          Fonksiyon
+                        </div>
                       </div>
                       <ul className="space-y-1">
                         <li>Çene eklemi (TME) problemlerine protetik yaklaşım</li>
@@ -428,9 +403,16 @@ export default function Home() {
                         <li>Uzun ömürlü protez tasarımı</li>
                       </ul>
                     </div>
+
+                    {/* İletişim */}
                     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                      <div className="mb-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
-                        İletişim
+                      <div className="mb-3 flex items-center gap-2">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-50">
+                          <ChatIcon className="h-4 w-4 text-indigo-600" />
+                        </div>
+                        <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-sky-700">
+                          İletişim
+                        </div>
                       </div>
                       <ul className="space-y-1">
                         <li>Korku ve anksiyetesi yüksek hastalarla iletişim</li>
@@ -466,68 +448,32 @@ export default function Home() {
               </div>
             </section>
 			
-			{/* MUTLU HASTALAR / GERİ BİLDİRİMLER */}
-<section className="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-  <h2 className="mb-1 text-lg font-semibold tracking-tight text-slate-900">
-    Hastaların Sık Vurguladığı Noktalar
+			
+			{/* GALERİ */}
+<section id="galeri" className="mt-6">
+  <h2 className="mb-3 text-xl font-semibold tracking-tight text-slate-900">
+    Klinik Fotoğraf Galerisi
   </h2>
-  <p className="mb-4 text-[13px] text-slate-500">
-    Aşağıdaki başlıklar, yıllar içinde Dt. Hüseyin Bora Şimşek hakkında hastalar tarafından sıkça dile getirilen memnuniyet unsurlarını özetlemektedir. 
-    (İlerleyen dönemde bu alan, gerçek hasta geri bildirimleriyle birebir güncellenebilir.)
+  <p className="mb-4 text-sm text-slate-600">
+    Klinik çalışma ortamımızdan bazı kareler ve ileride eklenecek tanıtım videoları.
   </p>
 
-  <div className="grid gap-4 text-sm text-slate-700 sm:grid-cols-3">
-    <div className="flex h-full flex-col gap-2 rounded-2xl bg-slate-50 p-4">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        Anlaşılır Bilgilendirme
-      </span>
-      <p className="text-[13px] leading-snug">
-        Pek çok hasta, tedavi öncesi ve sonrasında{" "}
-        <span className="font-medium text-slate-900">
-          ne yapılacağını sade ve anlaşılır bir dille öğrenebilmesini
-        </span>{" "}
-        memnuniyetle ifade etmektedir.
-      </p>
-    </div>
-
-    <div className="flex h-full flex-col gap-2 rounded-2xl bg-slate-50 p-4">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        Sakin Klinik Ortamı
-      </span>
-      <p className="text-[13px] leading-snug">
-        Özellikle uzun süredir Ceyhan’da takipte olan hastalar,{" "}
-        <span className="font-medium text-slate-900">
-          yoğun poliklinik temposuna rağmen sakin, saygılı ve düzenli bir yaklaşım
-        </span>{" "}
-        sunulmasını önemli bir artı olarak dile getirmektedir.
-      </p>
-    </div>
-
-    <div className="flex h-full flex-col gap-2 rounded-2xl bg-slate-50 p-4">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-        Uzun Süreli Güven
-      </span>
-      <p className="text-[13px] leading-snug">
-        Yıllardır aynı hekimde tedavi gören aileler,{" "}
-        <span className="font-medium text-slate-900">
-          hekim–hasta ilişkisinin sürekliliğini ve güven duygusunu
-        </span>{" "}
-        en çok vurgulanan memnuniyet kriteri olarak öne çıkarmaktadır.
-      </p>
-    </div>
-  </div>
+  <Gallery />
 </section>
 
-
+			
             {/* İLETİŞİM */}
             <section id="contact" aria-labelledby="contact-title">
               <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
                 <div>
                   <h2
                     id="contact-title"
-                    className="mb-4 text-xl font-semibold tracking-tight text-slate-900"
+                    className="mb-4 flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
                   >
-                    İletişim
+                    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-indigo-50">
+                      <ChatIcon className="h-4 w-4 text-indigo-600" />
+                    </span>
+                    <span>İletişim</span>
                   </h2>
                   <p className="mb-4 text-sm leading-relaxed text-slate-700">
                     Randevu ve danışmak istediğiniz tüm konular için aşağıdaki
@@ -547,7 +493,7 @@ export default function Home() {
                         Telefon:
                       </span>{" "}
                       <a
-                        href="tel:+90 (505)642 3217"
+                        href="tel:+905056423217"
                         className="text-sky-700 hover:underline"
                       >
                         0 (505) 642 3217
@@ -573,13 +519,18 @@ export default function Home() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                  <form className="space-y-3">
+                  <form
+                    className="space-y-3"
+                    method="POST"
+                    action="/api/contact"
+                  >
                     <div>
                       <label className="block text-xs font-medium text-slate-700">
                         Adınız Soyadınız
                       </label>
                       <input
                         type="text"
+                        name="name"
                         className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-sky-400"
                         placeholder="Ad Soyad"
                       />
@@ -590,6 +541,7 @@ export default function Home() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-sky-400"
                         placeholder="0 (5xx) xxx xx xx"
                       />
@@ -599,17 +551,18 @@ export default function Home() {
                         Mesajınız
                       </label>
                       <textarea
+                        name="message"
                         className="mt-1 h-24 w-full resize-none rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-sky-400"
                         placeholder="Kısaca belirtiniz..."
                       />
                     </div>
                     <button
-                      type="button"
+                      type="submit"
                       className="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-sky-500 to-cyan-400 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-sky-600 hover:to-cyan-500"
                     >
-                      Mesaj Gönder (Örnek Form)
+                      Mesaj Gönder
                     </button>
-                    <p className="text-[11px] text-slate-500">
+                    <p className="text-[11px] text-slate-500">                      
                     </p>
                   </form>
                 </div>
@@ -635,7 +588,6 @@ export default function Home() {
           {/* SAĞ SÜTUN: STICKY NAVBAR + HIZLI İLETİŞİM */}
           <aside className="mt-8 hidden w-64 shrink-0 lg:mt-0 lg:block">
             <div className="sticky top-24 space-y-4">
-              {/* NAV KARTI */}
               <nav className="rounded-2xl border border-slate-200 bg-white p-4 text-xs text-slate-700 shadow-sm">
                 <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">
                   Sayfa Haritası
@@ -680,7 +632,6 @@ export default function Home() {
                 </ul>
               </nav>
 
-              {/* KISA İLETİŞİM ÖZETİ */}
               <div className="rounded-2xl border border-sky-100 bg-sky-50/80 p-4 text-[11px] text-slate-800 shadow-sm">
                 <div className="mb-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-sky-700">
                   Randevu & İletişim
