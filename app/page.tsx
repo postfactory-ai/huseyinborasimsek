@@ -141,6 +141,96 @@ export default function Home() {
                 </div>
               </div>
             </section>
+			
+			{/* ÖNE ÇIKAN İSTATİSTİKLER */}
+<section className="mt-4 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm sm:px-6 sm:py-5">
+  <div className="grid gap-4 text-sm text-slate-800 sm:grid-cols-3">
+    <div className="flex flex-col gap-1 rounded-xl bg-sky-50/70 p-3">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        Mesleki Deneyim
+      </span>
+      <span className="text-2xl font-semibold text-sky-800">
+        {new Date().getFullYear() - 2002}+ yıl
+      </span>
+      <p className="text-[13px] leading-snug text-slate-600">
+        2002’den bu yana aktif klinik diş hekimliği pratiği.
+      </p>
+    </div>
+
+    <div className="flex flex-col gap-1 rounded-xl bg-emerald-50/70 p-3">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        Ceyhan’da Hizmet
+      </span>
+      <span className="text-2xl font-semibold text-emerald-800">
+        {new Date().getFullYear() - 2015}+ yıl
+      </span>
+      <p className="text-[13px] leading-snug text-slate-600">
+        2015’ten bu yana Ceyhan Devlet Hastanesi ADSM Ek Hizmet Birimi sorumlu hekimi.
+      </p>
+    </div>
+
+    <div className="flex flex-col gap-1 rounded-xl bg-cyan-50/70 p-3">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        Uzun Süreli Takip
+      </span>
+      {/* Buradaki sayı bilinmiyorsa şimdilik köşeli parantezle placeholder bırak */}
+      <span className="text-2xl font-semibold text-cyan-800">
+        {/* Örn: 3000+ */}
+        Binlerce mutlu hasta dosyası
+      </span>
+      <p className="text-[13px] leading-snug text-slate-600">
+        Yıllar içinde Ceyhan ve çevresinden çok sayıda hastayla sürdürülen uzun soluklu hekim–hasta ilişkileri.
+      </p>
+    </div>
+  </div>
+</section>
+
+			{/* ÖNE ÇIKANLAR BANDI */}
+<section className="mt-4 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm sm:px-6 sm:py-5">
+  <div className="grid gap-4 text-sm text-slate-800 sm:grid-cols-3">
+    <div className="flex items-start gap-3">
+      <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-sky-50 text-sky-700 text-xs font-semibold">
+        20+
+      </div>
+      <div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+          Mesleki Deneyim
+        </div>
+        <p className="text-[13px] leading-snug">
+          2002’den bu yana aktif klinik diş hekimliği pratiği.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start gap-3">
+      <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 text-xs font-semibold">
+        2015
+      </div>
+      <div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+          Ceyhan’a Bağlılık
+        </div>
+        <p className="text-[13px] leading-snug">
+          2015’ten bu yana Ceyhan Devlet Hastanesi ADSM sorumlu hekimi.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex items-start gap-3">
+      <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700 text-xs font-semibold">
+        Kamu
+      </div>
+      <div>
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+          Kamu Sağlık Hizmeti
+        </div>
+        <p className="text-[13px] leading-snug">
+          Etik, şeffaf ve kamu odaklı sağlık hizmeti anlayışı.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
             {/* CEYHAN’A GÖNÜL VERMİŞ HEKİM */}
             <section
@@ -235,7 +325,6 @@ export default function Home() {
                     </li>
                   </ul>
                   <p className="pt-1 text-[11px] text-slate-500">
-                    Eğitim, uzmanlık ve sertifikalar daha sonra detaylandırılabilir.
                   </p>
                 </div>
               </div>
@@ -261,6 +350,42 @@ export default function Home() {
                 ))}
               </div>
             </section>
+			{/* RANDEVU SÜRECİ */}
+<section className="mt-2 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+  <h2 className="mb-4 text-lg font-semibold tracking-tight text-slate-900">
+    Muayene Süreci Nasıl İlerler?
+  </h2>
+  <div className="grid gap-4 text-sm text-slate-700 sm:grid-cols-3">
+    <div className="flex flex-col gap-1 rounded-2xl bg-slate-50 p-4">
+      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        1. Değerlendirme
+      </div>
+      <p className="text-[13px] leading-snug">
+        Şikâyetleriniz dinlenir ve ağız içi muayene yapılır; ihtiyaçlarınız
+        net bir dille anlatılır.
+      </p>
+    </div>
+    <div className="flex flex-col gap-1 rounded-2xl bg-slate-50 p-4">
+      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        2. Planlama
+      </div>
+      <p className="text-[13px] leading-snug">
+        Gerekiyorsa radyografik inceleme ve size özel bir tedavi planı
+        oluşturulur.
+      </p>
+    </div>
+    <div className="flex flex-col gap-1 rounded-2xl bg-slate-50 p-4">
+      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        3. Tedavi & Takip
+      </div>
+      <p className="text-[13px] leading-snug">
+        Uygulanan tedaviler, kontrol randevuları ile desteklenir; uzun dönem
+        takip önceliklendirilir.
+      </p>
+    </div>
+  </div>
+</section>
+
 
             {/* UZMANLIK ALANLARI */}
             <section id="services" aria-labelledby="services-title">
@@ -340,6 +465,59 @@ export default function Home() {
                 </div>
               </div>
             </section>
+			
+			{/* MUTLU HASTALAR / GERİ BİLDİRİMLER */}
+<section className="mt-8 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+  <h2 className="mb-1 text-lg font-semibold tracking-tight text-slate-900">
+    Hastaların Sık Vurguladığı Noktalar
+  </h2>
+  <p className="mb-4 text-[13px] text-slate-500">
+    Aşağıdaki başlıklar, yıllar içinde Dt. Hüseyin Bora Şimşek hakkında hastalar tarafından sıkça dile getirilen memnuniyet unsurlarını özetlemektedir. 
+    (İlerleyen dönemde bu alan, gerçek hasta geri bildirimleriyle birebir güncellenebilir.)
+  </p>
+
+  <div className="grid gap-4 text-sm text-slate-700 sm:grid-cols-3">
+    <div className="flex h-full flex-col gap-2 rounded-2xl bg-slate-50 p-4">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        Anlaşılır Bilgilendirme
+      </span>
+      <p className="text-[13px] leading-snug">
+        Pek çok hasta, tedavi öncesi ve sonrasında{" "}
+        <span className="font-medium text-slate-900">
+          ne yapılacağını sade ve anlaşılır bir dille öğrenebilmesini
+        </span>{" "}
+        memnuniyetle ifade etmektedir.
+      </p>
+    </div>
+
+    <div className="flex h-full flex-col gap-2 rounded-2xl bg-slate-50 p-4">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        Sakin Klinik Ortamı
+      </span>
+      <p className="text-[13px] leading-snug">
+        Özellikle uzun süredir Ceyhan’da takipte olan hastalar,{" "}
+        <span className="font-medium text-slate-900">
+          yoğun poliklinik temposuna rağmen sakin, saygılı ve düzenli bir yaklaşım
+        </span>{" "}
+        sunulmasını önemli bir artı olarak dile getirmektedir.
+      </p>
+    </div>
+
+    <div className="flex h-full flex-col gap-2 rounded-2xl bg-slate-50 p-4">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+        Uzun Süreli Güven
+      </span>
+      <p className="text-[13px] leading-snug">
+        Yıllardır aynı hekimde tedavi gören aileler,{" "}
+        <span className="font-medium text-slate-900">
+          hekim–hasta ilişkisinin sürekliliğini ve güven duygusunu
+        </span>{" "}
+        en çok vurgulanan memnuniyet kriteri olarak öne çıkarmaktadır.
+      </p>
+    </div>
+  </div>
+</section>
+
 
             {/* İLETİŞİM */}
             <section id="contact" aria-labelledby="contact-title">
