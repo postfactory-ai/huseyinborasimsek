@@ -455,7 +455,7 @@ export default function Home() {
     Klinik Fotoğraf Galerisi
   </h2>
   <p className="mb-4 text-sm text-slate-600">
-    Klinik çalışma ortamımızdan bazı kareler ve ileride eklenecek tanıtım videoları.
+    Klinik çalışma ortamımızdan bazı kareler.
   </p>
 
   <Gallery />
