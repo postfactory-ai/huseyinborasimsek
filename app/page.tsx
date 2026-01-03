@@ -610,8 +610,6 @@ export default function Home() {
                       Mesaj Gönder (Örnek Form)
                     </button>
                     <p className="text-[11px] text-slate-500">
-                      Bu form örnek amaçlıdır. İstenirse daha sonra e-posta veya
-                      randevu sistemine entegre edilebilir.
                     </p>
                   </form>
                 </div>
