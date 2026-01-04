@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Script from "next/script";
 import Gallery from "../components/Gallery";
+import WhatsAppContactForm from "../components/WhatsAppContactForm";
 
 type IconProps = React.SVGProps<SVGSVGElement>;
 
@@ -519,52 +520,7 @@ export default function Home() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                  <form
-                    className="space-y-3"
-                    method="POST"
-                    action="/api/contact"
-                  >
-                    <div>
-                      <label className="block text-xs font-medium text-slate-700">
-                        Adınız Soyadınız
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-sky-400"
-                        placeholder="Ad Soyad"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-slate-700">
-                        Telefon Numaranız
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-sky-400"
-                        placeholder="0 (5xx) xxx xx xx"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-slate-700">
-                        Mesajınız
-                      </label>
-                      <textarea
-                        name="message"
-                        className="mt-1 h-24 w-full resize-none rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-sky-400"
-                        placeholder="Kısaca belirtiniz..."
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-sky-500 to-cyan-400 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:from-sky-600 hover:to-cyan-500"
-                    >
-                      Mesaj Gönder
-                    </button>
-                    <p className="text-[11px] text-slate-500">                      
-                    </p>
-                  </form>
+                  <WhatsAppContactForm />
                 </div>
               </div>
             </section>
